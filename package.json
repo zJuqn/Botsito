@@ -1,7 +1,7 @@
 {
   "name": "botdesdecero",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bot para empezar discord.js para aquellas personas que recien empiezan con esto, espero que les funcione y que lean las explicaciones para lograr comprender el codigo :D",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

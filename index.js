@@ -13,7 +13,7 @@ mongoose.connect(process.env.mongodb_url, { //Haces la conexion con la url
     useUnifiedTopology: true,
     useFindAndModify: false
 })
-.then(db => console.log('Conectado a MongoDB')) //Le haces un console.log para saber que se ha conectado correctamente
+.then(() => console.log('Conectado a MongoDB')) //Le haces un console.log para saber que se ha conectado correctamente
 .catch(err => console.error(err)) //Capturas el error
 
 
