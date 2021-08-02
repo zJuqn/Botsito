@@ -16,7 +16,7 @@ module.exports = {
 if(!mensaje) {
     return;//SI no tiene el mensaje retornamos
 }
-const mensaje_con_replace = mensaje.replace(/{user}/, member.username).replace(/{userID}/, member.id).replace(/{Servidor}/, member.guild.name).replace(/{memberCount}/, member.guild.memberCount).replace(/{ServidorID}/, member.guild.id)
+const mensaje_con_replace = mensaje.replace(/{user}/, message.username).replace(/{userID}/, message.id).replace(/{Servidor}/, message.guild.name).replace(/{memberCount}/, message.guild.memberCount).replace(/{ServidorID}/, message.guild.id)
 //Remplazamos los parametros que usamos en el setWelcome//
 message.channel.send('Previsualizacion de bienvenida:')
 message.channel.send(mensaje_con_replace)//ENviamos
