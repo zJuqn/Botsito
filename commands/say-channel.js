@@ -23,7 +23,7 @@ module.exports = {//Exportamos la funcion run
             //Si quieren pueden quitar esto es opcional yo lo pongo ps para que quede mas largo el code xd
             return message.channel.send('El limite son 200 caracteres')
         }
-        const validacion = message.guilds.channels.cache.get(canal.id)//Validamos que el canal no sea de otro server
+        const validacion = client.channels.cache.get(canal.id)//Validamos que el canal no sea de otro server
         if(!validacion) {//Si no es valido el canal retornamos
             return message.channel.send('Ese canal no es valido')
         }
