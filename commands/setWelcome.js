@@ -1,5 +1,9 @@
 const Welcome = require('../Schema/Bienvenidas')//Llamamos nuestro schema
+<<<<<<< HEAD
 const { MessageEmbed, Permissions } = require('discord.js')
+=======
+const { MessageEmbed } = require('discord.js')
+>>>>>>> 3b61b10aba0698a513737fa10a4951845bec1484
 const prefix = process.env.prefix
 
 module.exports = {
@@ -7,7 +11,11 @@ module.exports = {
     alias: ['setwelcome'],
     run: async (client, message, args) => {
         //Si utilizan execute remplazenlo por el run//
+<<<<<<< HEAD
         if(!message.member.permissionsFor.has(Permissions.FLAGS.ADMINISTRATOR)) {//SI no tiene permisos de Administrador que retorne
+=======
+        if(!message.member.hasPermission('ADMINISTRATOR')) {//SI no tiene permisos de Administrador que retorne
+>>>>>>> 3b61b10aba0698a513737fa10a4951845bec1484
             return message.channel.send(new MessageEmbed()
             .setTitle('Ups...')
             .setDescription('No tieneos los suficientes permisos para usar este comando')

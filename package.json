@@ -14,8 +14,15 @@
   "dependencies": {
     "discord-buttons": "^4.0.0",
     "discord-reply": "^0.1.2",
+<<<<<<< HEAD
     "discord.js": "^13.0.1",
     "dotenv": "^10.0.0"
+=======
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.13.5"
+>>>>>>> 3b61b10aba0698a513737fa10a4951845bec1484
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
