@@ -1,11 +1,11 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, Permissions } = require('discord.js')
 const Sugerencia = require('../Schema/sugerencias')//Llamamos nuestra schema
 
 module.exports = {//exportamos el name, alias y la funcion run
     name: 'delete-suggest',//colocamos un nombre
     alias: ['deletesuggest'],//Colocamos un alias es opcional si no lo quieren colocar quiten las comillas y solamente dejen las llaves
     run: async (client, message, args) => {
-        if(!message.member.hasPermission('ADMINISTRATOR')){//Si el usuario no tiene permisos de administrador...
+        if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)){//Si el usuario no tiene permisos de administrador...
             return message.channel.send(new MessageEmbed()//Retornamos con un new MessageEmbed()
             .setTitle('Algo a ocurrido')
             .setDescription('No tienes los permisos suficientes para ejecutar este comando')

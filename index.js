@@ -1,7 +1,8 @@
 const Discord = require('discord.js')//Definimos nuestro discord.js
-const client = new Discord.Client()//Creamos nuestro client
+const intents = new Discord.Intents(32509)
+const client = new Discord.Client({ intents })//Creamos nuestro client
 require('dotenv').config();
-const { MessageEmbed, Collection} = require('discord.js')//Hacemos un collector y definimos MessageEmbed
+const { MessageEmbed, Collection, Permissions} = require('discord.js')//Hacemos un collector y definimos MessageEmbed
 const mongoose = require('mongoose')//Mandamos a llamar nuestra base data mongoose | npm i mongoose
 const fs = require('fs'); //Mandamos a llamar fs | npm i fs
 let { readdirSync } = require('fs');//npm i fs

@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, Permissions } = require('discord.js')
 const Prefix = require('../Schema/prefix')//Requerimos nuestro schema
 
 //Exportaremos el nombre y el alias luego realizaremos la funcion run
@@ -8,7 +8,7 @@ module.exports = {
     alias: [],
     run: async (client, message, args) => {//Si utilizas execute remplazalo por el run
 
-        if(!message.member.hasPermission('ADMINISTRATOR')) {//Si el usuario no tiene permisos que retorne
+        if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {//Si el usuario no tiene permisos que retorne
             return message.channel.send(new MessageEmbed()
             .setTitle('Algo a ocurrido')
             .setDescription('No tienes los suficientes permisos para ejecutar este comando')

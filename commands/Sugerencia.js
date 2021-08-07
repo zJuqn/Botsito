@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, Permissions } = require('discord.js')
 const Sugerencia = require('../Schema/sugerencias')//Buscamos nuestro Scema
 
 module.exports = {//Exportamos nuestro nombre, alias y la funcion run
@@ -25,7 +25,7 @@ module.exports = {//Exportamos nuestro nombre, alias y la funcion run
     .setColor('BLUE')
     .setFooter('Sugerencia escrita por: ' + message.author.username)
 
-    client.channels.resolve(canal.canal_id).send(embed)//Buscamos el ID de el canal y enviamos
+    client.channels.resolve(canal.canal_id).send({embeds: [embed]})//Buscamos el ID de el canal y enviamos
     await message.channel.send('La sugerencia a sido enviada a el canal establecido')
     //Enviamos en el canal donde se escribio el mensaje que la sugerencia a sido enviada//
 }
